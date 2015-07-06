@@ -47,5 +47,31 @@
 ```
   - **the font should change to helvetica and the button should be styled blue**
 
+5.  Set  the  `*,*:after,*:before` selector to this: `outline: 1px solid rgba(200,0,0,.15);`  -- you should see red lines around each html element... this will help with layout and wireframing
+
+
+####Part1 - Front Page - Basic Layout
+1. Insert the hero component
+http://getbootstrap.com/components/#jumbotron
+```html
+<div class="jumbotron splash-front-page">
+      <h1>La Irina Condesa Lazaar</h1>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
+```
+
+2.  Let's give it some styles!
+Note: I generally prefer applying styles to custom names rather than the bootstrap format names. 
+```css
+.splash-front-page{
+    background: url('../images/kitchen.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    >* {font-weight: 100;}
+}
+```
+
+3. *Grid System* Let's give it rows.
+
 
 

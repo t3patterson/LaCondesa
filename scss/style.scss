@@ -48,6 +48,12 @@
     }
 }
 
+@define-mixin mq $width {
+    @media only screen and (min-width: $(width)px){
+        
+    }
+}
+
 @mixin grid 2 {}
 @mixin grid 4 {}
 @mixin grid 6 {}
@@ -95,3 +101,187 @@ img {
 /**
  * YOUR CODE HERE
  */
+
+
+.bg-image{
+    display: block;
+    height: 100%;
+}
+
+.splash-front-page{
+    background: url('../images/kitchen.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    margin-bottom: 0;
+    h1 {font-weight: 100;}
+
+}
+
+main.main-content{
+    color: white;
+
+    .row {
+        > * {
+            padding: 1%;
+        }
+    }
+
+    /**
+     * -----------------------
+     * Row 1 styles
+     * -----------------------
+     */
+    
+    .row-1-style{
+        height: 220px;
+    }
+        
+        .left-col-menu{
+            height: 100%;
+            background: #333;
+            background-clip: content-box;
+        }
+
+        .right-col-img{
+            height: 100%;
+            background-clip: content-box;
+        }
+
+        .menu-label{
+            padding-top: 5%;
+            text-align: center;
+        }
+
+    /**
+     * -----------------------
+     * Row 2 styles
+     * -----------------------
+     */
+        
+    .row-2-style{
+        .inner-row-2a{
+            padding: 1.5rem;
+        }
+    }
+    
+    .left-col-info{
+        background: indianred;
+        background-clip: content-box;
+    }
+
+    h5 {
+        margin-top: 0px;
+    }
+
+
+    .inner-row-2b{
+    
+        >*{
+            padding: 0% 1% 1% 1%;
+        }
+    }
+    
+    .twitter {background: dodgerblue}
+
+    .facebook {background: navy;}
+
+    .make-reservation{ background: darkslategray;}
+   
+    .twitter,
+    .facebook ,
+    .make-reservation{
+        background-clip: content-box;
+        > * {
+            text-align: center;
+            padding-left: 1.0rem;
+            padding-right: 1.0rem;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+     /**
+     * -----------------------
+     * Row 3 styles
+     * -----------------------
+     */
+    
+    .row-3-style{
+        background: #333;
+        background-clip: content-box;
+        padding: 0 1% 1% 1%;
+
+
+        section{
+            padding: 1.0rem;
+        }
+        
+        .input-fields{
+            text-align: center;
+            padding-top: 0;
+        }
+
+        button,
+        .newsletter-signup{
+            display: inline-block;
+            line-height: 30px;
+        }
+
+        .newsletter-signup{
+            width: 180px;
+            background: rgba(0,0,0,0);
+            color: lightblue;
+            margin-right: .5rem;
+        }
+
+    }
+
+     
+    
+}
+
+
+@media only screen and (min-width: 768px){
+   main.main-content{
+        .row-2-style{
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+   main.main-content{
+        .row-2-style{
+        }
+
+         .row-3-style{
+            background: #333;
+            background-clip: content-box;
+            padding: 1%;
+            section{
+                padding: 1.0rem;
+            }
+            
+            .input-fields{
+                padding-top: 5%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){
+   main.main-content{
+            font-size: 110%;
+        
+        .row-2-style{
+            .inner-row-2a{
+                height: 290px;
+            }
+        }
+        .make-reservation{ 
+            padding-bottom: 1%;
+        }
+
+        
+    }
+}
