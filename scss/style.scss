@@ -113,6 +113,7 @@ img {
     background-size: cover;
     color: white;
     margin-bottom: 0;
+    
     h1 {font-weight: 100;}
 
 }
@@ -140,6 +141,10 @@ main.main-content{
             height: 100%;
             background: #333;
             background-clip: content-box;
+                h1{
+                padding-bottom: 40px; 
+                padding-top: 40px;
+                }
         }
 
         .right-col-img{
@@ -242,6 +247,10 @@ main.main-content{
 
 
 @media only screen and (min-width: 768px){
+    .splash-front-page{
+        padding-top: 96px;
+        padding-bottom: 96px;
+     }
    main.main-content{
         .row-2-style{
             
