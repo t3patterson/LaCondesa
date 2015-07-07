@@ -113,7 +113,7 @@ img {
     background-size: cover;
     color: white;
     margin-bottom: 0;
-    padding: 60px 6px;
+    
     h1 {font-weight: 100;}
 
 }
@@ -140,6 +140,7 @@ main.main-content{
         .left-col-menu{
             height: 100%;
             background: #333;
+            background-clip: content-box;
                 h1{
                 padding-bottom: 40px; 
                 padding-top: 40px;
@@ -148,6 +149,7 @@ main.main-content{
 
         .right-col-img{
             height: 100%;
+            background-clip: content-box;
         }
 
         .menu-label{
@@ -163,23 +165,17 @@ main.main-content{
         
     .row-2-style{
         .inner-row-2a{
-            font-family: 'Palatino';
             padding: 1.5rem;
         }
     }
     
     .left-col-info{
         background: indianred;
+        background-clip: content-box;
     }
 
     h5 {
         margin-top: 0px;
-    }
-
-    hr{
-        width: 100px;
-        color: #fff;
-        margin: 0 0;
     }
 
 
@@ -199,7 +195,7 @@ main.main-content{
     .twitter,
     .facebook ,
     .make-reservation{
-
+        background-clip: content-box;
         > * {
             text-align: center;
             padding-left: 1.0rem;
@@ -217,11 +213,11 @@ main.main-content{
     
     .row-3-style{
         background: #333;
+        background-clip: content-box;
         padding: 0 1% 1% 1%;
 
 
         section{
-            font-family: 'Palatino';
             padding: 1.0rem;
         }
         
@@ -269,6 +265,7 @@ main.main-content{
 
          .row-3-style{
             background: #333;
+            background-clip: content-box;
             padding: 1%;
             section{
                 padding: 1.0rem;
