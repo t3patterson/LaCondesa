@@ -5,6 +5,11 @@ require("es5-shim")
 require("babel/polyfill")
 
 var Promise = require('es6-promise').Promise
+var React = require('react');
+import { MyHomePage } from './bootstrap-react-components.js'
+
+
+
 // just Node?
 // var fetch = require('node-fetch')
 // Browserify?
@@ -16,10 +21,16 @@ var Promise = require('es6-promise').Promise
 // require your own libraries, too!
 // var Router = require('./app.js')
 
-// window.addEventListener('load', app)
+window.addEventListener('load', app)
 
-// function app() {
-    // start app
-    // new Router()
-// }
+function app() {
+	console.log('app loded')
+}
+
+
+
+
+
+
+
 

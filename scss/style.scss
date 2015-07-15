@@ -1,5 +1,6 @@
-
 @import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/react-datepicker/dist/react-datepicker.min.css"
+   
 
 /**
  * BOX-SIZING
@@ -143,6 +144,7 @@ main.main-content{
                 h1{
                 padding-bottom: 40px; 
                 padding-top: 40px;
+                font-weight: 200;
                 }
         }
 
@@ -169,7 +171,7 @@ main.main-content{
     }
     
     .left-col-info{
-        background: indianred;
+        background: #DF5A49;
     }
 
     h5 {
@@ -194,7 +196,10 @@ main.main-content{
 
     .facebook {background: navy;}
 
-    .make-reservation{ background: darkslategray;}
+    .make-reservation{ 
+        background: #334D5C;
+        font-weight: 200;
+    }
    
     .twitter,
     .facebook ,
@@ -244,9 +249,31 @@ main.main-content{
         }
 
     }
+}
 
-     
+section.menu-pop-out{
+    background: url('../images/white-texture.jpeg') repeat ;
+    font-family: "Palatino","Georgia","Serif";
     
+    .menu-group{
+       padding: 1%;
+       article{ padding : 2rem; border: 3px solid #45B29D; }
+       .menu-header-hr{
+            position: relative;
+            hr{border-color: #aaa;}
+            span{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #334D5C;
+                top: -14px;
+                font-size: 21px
+
+            }
+       }
+       h5{color: #45B29D;}
+    }
+
 }
 
 
