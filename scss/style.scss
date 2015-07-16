@@ -103,6 +103,9 @@ img {
  * YOUR CODE HERE
  */
 
+.wrapper{
+    position: relative;
+}
 
 .bg-image{
     display: block;
@@ -251,16 +254,14 @@ main.main-content{
     }
 }
 
-section.menu-pop-out{
-    background: url('../images/white-texture.jpeg') repeat ;
-    font-family: "Palatino","Georgia","Serif";
-    
-    .menu-group{
-       padding: 1%;
-       article{ padding : 2rem; border: 3px solid #45B29D; }
-       .menu-header-hr{
+.menu-header-hr{
             position: relative;
-            hr{border-color: #aaa;}
+
+            hr{
+                border-color: #aaa; 
+                width: 100%;
+            }
+            
             span{
                 position: absolute;
                 left: 50%;
@@ -271,11 +272,77 @@ section.menu-pop-out{
 
             }
        }
+
+section.menu-pop-out{
+    background: url('../images/white-texture.jpeg') repeat ;
+    font-family: "Palatino","Georgia","Serif";
+    
+    position: absolute;
+    width: 95%;
+    max-width: 900px;
+    right: 0%;
+    top: 56px;
+
+    .menu-group{
+        display: block;
+        overflow: hidden;
+        align-items: stretch;
+    }
+
+    .menu-section{
+        margin: .5rem;
+        border: 3px solid #45B29D;
+        align-self: stretch;
+
+       article{ 
+        padding : 2rem;
+
+        }
+
        h5{color: #45B29D;}
     }
 
 }
 
+
+.map-location{
+    position: absolute;
+    width: 300;
+    height: 225;
+    bottom:0;
+    left:0;
+    padding: 1%;
+    background: url('../images/white-texture.jpeg') repeat ;
+
+    article{
+        padding: 2%;
+        border: 3px solid #EFC94C ;
+    }
+
+   
+}
+
+.about-us{
+    font-family: "Palatino","Goergia",'serif';
+    width: 95%;
+    max-width: 800px;
+    position: absolute;
+    z-index: 100;
+    left: 0%;
+    top: 56px;
+    padding: 1%;
+    background: url('../images/white-texture.jpeg') repeat ;
+    border-radius: 1px;
+    article{
+        padding: 2%;
+        border: #E27A3F  3px solid;
+        h4{
+            color: #E27A3F ;
+        }
+
+    }
+         
+}
 
 @media only screen and (min-width: 768px){
     .splash-front-page{
@@ -287,6 +354,33 @@ section.menu-pop-out{
             
         }
     }
+
+    section.menu-pop-out{
+        background: url('../images/white-texture.jpeg') repeat ;
+        font-family: "Palatino","Georgia","Serif";
+        
+        position: absolute;
+        width: 95%;
+
+        .menu-group{
+            display: flex;
+            overflow: hidden;
+            align-items: stretch;
+        }
+
+        .menu-section{
+            margin: 1%;
+            flex: 1;
+            border: 3px solid #45B29D;
+            align-self: stretch;
+        }
+    }
+
+    .map-location{
+        width: 600;
+        height: 450;
+}
+
 }
 
 @media only screen and (min-width: 992px){
