@@ -99,12 +99,31 @@
 img {
     max-width: 100%;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .2s;
+    &:hover{
+        color: #f0ad4e;
+        text-decoration: none;
+    }
+}
+
 /**
  * YOUR CODE HERE
  */
 
 .wrapper{
     position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &.flow-over{
+        overflow-y: auto;
+    }
 }
 
 .bg-image{
@@ -174,10 +193,11 @@ main.main-content{
     }
     
     .left-col-info{
-        background: #DF5A49;
+        font-size: 18px;
+        background: #702D25;
     }
 
-    h5 {
+    h4 {
         margin-top: 0px;
     }
 
@@ -255,37 +275,44 @@ main.main-content{
 }
 
 .menu-header-hr{
-            position: relative;
 
-            hr{
-                border-color: #aaa; 
-                width: 100%;
-            }
-            
-            span{
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                color: #334D5C;
-                top: -14px;
-                font-size: 21px
+    position: relative;
 
-            }
-       }
+    hr{
+        border-color: #aaa; 
+        width: 100%;
+    }
+    
+    span{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #334D5C;
+        top: -14px;
+        font-size: 21px
 
-section.menu-pop-out{
+    }
+}
+
+.menu-pop-out{
+    position: absolute;
+    z-index: 1037;
     background: url('../images/white-texture.jpeg') repeat ;
     font-family: "Palatino","Georgia","Serif";
-    
-    position: absolute;
-    width: 95%;
+    width: 80%;
     max-width: 900px;
-    right: 0%;
+    right: -900px;
     top: 56px;
+    overflow-y: auto;
+    transition: all .2s;
+
+    &.show-me{
+        right: 0px;
+    }
 
     .menu-group{
         display: block;
-        overflow: hidden;
+        overflow: auto;
         align-items: stretch;
     }
 
@@ -301,38 +328,46 @@ section.menu-pop-out{
 
        h5{color: #45B29D;}
     }
-
 }
 
-
 .map-location{
-    position: absolute;
-    width: 300;
-    height: 225;
-    bottom:0;
-    left:0;
+    z-index: 1034;
+    position: fixed;
+    width: 300px;
+    bottom: 0%;
+    left: -600px;
     padding: 1%;
     background: url('../images/white-texture.jpeg') repeat ;
+    transition: all .2s;
+    &.show-me{
+        left: 0;
+    }
 
     article{
         padding: 2%;
         border: 3px solid #EFC94C ;
-    }
-
-   
+    }   
 }
 
 .about-us{
-    font-family: "Palatino","Goergia",'serif';
-    width: 95%;
-    max-width: 800px;
     position: absolute;
-    z-index: 100;
-    left: 0%;
+    font-family: "Palatino","Georgia",'serif';
+    width: 85%;
+    max-width: 800px;
+    overflow-y: auto;
+    z-index: 1033;
+    left: -800px;
     top: 56px;
     padding: 1%;
     background: url('../images/white-texture.jpeg') repeat ;
     border-radius: 1px;
+    transition: all .2s;
+
+
+    &.show-me{
+        left: 0px;
+    }
+
     article{
         padding: 2%;
         border: #E27A3F  3px solid;
@@ -341,7 +376,23 @@ section.menu-pop-out{
         }
 
     }
-         
+}
+
+#overlay{
+    position: fixed;
+    z-index: 1032;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0,0,0,.75);
+    transition: all .1s;
+
+    &.show-me{
+        opacity: 1;
+        top: 0%;
+    } 
+
 }
 
 @media only screen and (min-width: 768px){
@@ -377,8 +428,7 @@ section.menu-pop-out{
     }
 
     .map-location{
-        width: 600;
-        height: 450;
+        width: 600px;
 }
 
 }
